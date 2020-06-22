@@ -1,0 +1,11 @@
+[Unit]
+Description=Runs the Cuti Pi bot
+
+[Service]
+Type=simple
+ExecStart=python /usr/local/sbin/cutipi-bot.py
+ExecStop=kill -9 $MAINPID
+
+[Install]
+WantedBy=multi-user.target
+

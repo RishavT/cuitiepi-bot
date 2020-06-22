@@ -1,0 +1,12 @@
+[Unit]
+Description=Keeps the Cuti Pi service alive
+
+[Service]
+Type=simple
+ExecStart=bash cutipi-keepalive.sh
+ExecStop=bash /usr/local/sbin/stop-cutipi-bot.sh $MAINPID
+
+[Install]
+WantedBy=multi-user.target
+
+

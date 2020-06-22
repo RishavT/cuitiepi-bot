@@ -1,6 +1,6 @@
 {
-	"token": "YOUR AUTH TOKEN COMES HERE",
-	"command_password": "YOUR COMMAND PASSWORD COMES HERE"
+	"telegram_token": "YOUR TELEGRAM TOKEN GOES HERE",
+	"command_password": "YOUR PASSWORD FOR RUNNING COMMANDS GOES HERE"
 }
 
 
