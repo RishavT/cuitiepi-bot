@@ -31,6 +31,12 @@ def ssid(update, context):
     update.message.reply_text(
         f'I am connected to: {get_ssid()}')
 
+def about(update, context):
+    """Sends all information about this pi"""
+    hello(update, context)
+    ip(update, context)
+    ssid(update, context)
+
 def run_command(update, context):
     args = context.args
     if len(args) < 2:
@@ -62,6 +68,7 @@ def main():
     updater.dispatcher.add_handler(CommandHandler('hello', hello))
     updater.dispatcher.add_handler(CommandHandler('ip', ip))
     updater.dispatcher.add_handler(CommandHandler('ssid', ssid))
+    updater.dispatcher.add_handler(CommandHandler('about', about))
     updater.dispatcher.add_handler(CommandHandler('test_error', test_error))
     updater.dispatcher.add_handler(CommandHandler('command', run_command))
     print("Running")
